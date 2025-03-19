@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Unna:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+	font-family: "Unna", serif;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: #ffffff;
+}
+
+footer {
+	background-color: rgb(0, 0, 0);
+	color: rgb(255, 255, 255);
+	text-align: center;
+	padding: 1rem 0;
+	margin: 0;
+}
+footer h2, footer p{
+	margin-left: 1rem;
+	line-height: 2rem;
+	text-align: justify;
+}
+
+@media (max-width: 900px) {
+	body {
+		overflow-x: hidden;
+	}
+}
+
+/* Estilização para a seção de Pedidos */
+#pedidos {
+	display: flex;
+    flex-direction: column; /* Alinha itens verticalmente */
+    gap: 1rem; /* Espaço entre os elementos */
+    background-color: #fff;
+    border: 1px solid rgb(218, 216, 216);
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 2rem auto;
+    max-width: 800px;
+}
+#pedidos h2 {
+    color: #85714d;
+    font-family: "Unna", serif;
+    margin-bottom: 1rem;
+}
+#pedidos ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+#pedidos li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgb(218, 216, 216);
+}
+#pedidos li:last-child {
+    border-bottom: none;
+}
+#pedidos #total {
+    font-weight: bold;
+    text-align: right;
+    margin-top: 1rem;
+}
+#pedidos button {
+    background-color: #85714d;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
+}
+#pedidos button:hover {
+    background-color: #6f5c3c;
+}

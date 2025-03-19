@@ -1,0 +1,99 @@
+/* -----------------------------
+   Layout da Seção Principal
+------------------------------ */
+main {
+	margin: 6rem 0 1rem 0;
+}
+#titulo {
+  margin-left: 1.5rem;
+	margin-bottom: 1rem;
+}
+
+/* ---------------------------
+   Estilização de Categorias
+---------------------------- */
+.categoria {
+	display: flex;
+	flex-wrap: nowrap;
+	overflow-x: scroll;
+	gap: 1rem;
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}
+.categoria::-webkit-scrollbar {
+	display: none;
+}
+.categoria > .produto:first-child {
+	margin-left: 1rem;
+}
+.categoria > .produto:last-child {
+	margin-right: 1rem;
+}
+#bebidas, #salgados, #doces {
+	margin-bottom: 2rem;
+}
+
+/* ---------------------------
+   Estilização de Produtos
+---------------------------- */
+.produto {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	background-color: rgb(255, 255, 255);
+	border: solid 1px rgb(218, 216, 216);
+	border-radius: 8px;
+	padding: 1rem;
+	flex-shrink: 0;
+	width: 100%;
+	max-width: 250px; 
+	position: relative;
+}
+.produto::after {
+	/* Linha separadora */
+	content: "";
+	position: absolute;
+	top: calc(100% - 4rem);
+	left: 1rem;
+	right: 1rem;
+	height: 1px;
+	background-color: rgb(218, 216, 216);
+}
+.produto-superior {
+	display: flex;
+	align-items: calc(50%);
+	justify-content: space-between;
+	gap: 1rem;
+}
+.produto-superior img {
+	/* Anterior: width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: 8px; */
+	width: 100%;
+	height: 5rem;
+	max-width: 120px;
+	object-fit: contain;
+	border-radius: 4px;
+}
+.produto-dados {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	text-align: left; /* informações à esquerda */
+}
+.produto-inferior {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.preco {
+	color: rgba(0, 0, 0, 0.63);
+	font-size: 16px;
+}
+.adicionar {
+	background-color: #85714d;
+	color: white;
+	padding: 0.5rem 30px;
+	border-radius: 4px;
+	font-size: 16px;
+	border: none;
+	cursor: pointer;
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio Online</title>
+    <link rel="stylesheet" href="assets\css\style.css">
+    <link rel="stylesheet" href="assets\css\categorias-produtos.css">
+    <link rel="stylesheet" href="assets\css\back-to-top.css">
+    <link rel="stylesheet" href="assets\css\mobile-nav-bar.css">
+</head>
+
+<body>
+    <header class="banner">
+        <div class="banner-container">
+            <nav>
+                <a onclick="location.reload();">
+                    <img src="assets\images\site-logo\logo.svg" alt="Logo" class="logo">
+                </a>
+                <label class="hamburger">
+                    <input type="checkbox">
+                    <svg viewBox="0 0 32 32">
+                        <path class="line line-top-bottom"
+                            d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22">
+                        </path>
+                        <path class="line" d="M7 16 27 16"></path>
+                    </svg>
+                </label>
+                <ul class="nav-list">
+                    <li><a href="#bebidas">BEBIDAS</a></li>
+                    <li><a href="#salgados">SALGADOS</a></li>
+                    <li><a href="#soces">DOCES</a></li>
+                    <li><a href="#pedidos">PEDIDOS</a></li>
+                    <li><a href="#contato">CONTATO</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <h2 id="titulo">BEBIDAS</h2>
+        <section id="bebidas" class="categoria">
+            <!-- Conteúdo carregado via JS -->
+        </section>
+
+        <h2 id="titulo">SALGADOS</h2>
+        <section id="salgados" class="categoria">
+            <!-- Conteúdo carregado via JS -->
+        </section>
+
+        <h2 id="titulo">DOCES</h2>
+        <section id="doces" class="categoria">
+            <!-- Conteúdo carregado via JS -->
+        </section>
+
+        <!-- Nova seção para exibir os pedidos -->
+        <section id="pedidos" class="categoria">
+            <h2 id="titulo">Pedidos</h2>
+            <ul id="lista-pedido">
+                <!-- Itens dos pedidos serão adicionados via main.js -->
+            </ul>
+            <p id="total">Total: R$ 0.00</p>
+            <!-- Botão para finalizar o pedido -->
+            <button id="finalizar-pedido">Finalizar Pedido</button>
+        </section>
+    </main>
+
+    <button class="back-to-top">
+        <svg class="svgIcon" viewBox="0 0 384 512">
+            <path
+                d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z">
+            </path>
+        </svg>
+    </button>
+
+    <footer>
+        <h2 id="contato">Contato:</h2>
+        <p> WhatsApp - <a href="https://wa.me/(43)99920-0898">(43) 99920-0898</a></p>
+        <p>Instagram - <a href="https://www.instagram.com/cafedelicia/">@cafedelicia</a></p>
+        
+        <br>&copy; 2025 - Café Delicia
+    </footer>
+</body>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/backToTop.js"></script>
+<script src="assets/js/mobileNavbar.js"></script>
+<script src="assets/js/loadProdutos.js"></script>
+
+</html>
