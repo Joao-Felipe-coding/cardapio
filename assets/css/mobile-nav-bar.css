@@ -88,7 +88,7 @@ nav {
 
 @media (max-width: 900px) {
 	.nav-list {
-		position: absolute;
+		position: fixed;
 		top: 4.4rem;
 		right: 0;
 		width: 50%;
