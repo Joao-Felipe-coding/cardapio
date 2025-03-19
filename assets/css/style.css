@@ -11,36 +11,17 @@ body {
 	background-color: #ffffff;
 }
 
-footer {
-	background-color: rgb(0, 0, 0);
-	color: rgb(255, 255, 255);
-	text-align: center;
-	padding: 1rem 0;
-	margin: 0;
-}
-footer h2, footer p{
-	margin-left: 1rem;
-	line-height: 2rem;
-	text-align: justify;
-}
-
-@media (max-width: 900px) {
-	body {
-		overflow-x: hidden;
-	}
-}
-
 /* Estilização para a seção de Pedidos */
 #pedidos {
 	display: flex;
-    flex-direction: column; /* Alinha itens verticalmente */
-    gap: 1rem; /* Espaço entre os elementos */
+    flex-direction: column; 
+    gap: 1rem; 
     background-color: #fff;
     border: 1px solid rgb(218, 216, 216);
     border-radius: 8px;
     padding: 1rem;
-    margin: 2rem auto;
-    max-width: 800px;
+    margin: auto;
+    max-width: 400px;
 }
 #pedidos h2 {
     color: #85714d;
@@ -76,4 +57,24 @@ footer h2, footer p{
 }
 #pedidos button:hover {
     background-color: #6f5c3c;
+}
+
+
+footer {
+	background-color: rgb(0, 0, 0);
+	color: rgb(255, 255, 255);
+	text-align: center;
+	padding: 1rem 0;
+	margin: 0;
+}
+footer h2, footer p{
+	margin-left: 1rem;
+	line-height: 2rem;
+	text-align: justify;
+}
+
+@media (max-width: 900px) {
+	body {
+		overflow-x: hidden;
+	}
 }

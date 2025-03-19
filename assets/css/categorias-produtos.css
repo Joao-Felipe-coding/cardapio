@@ -2,9 +2,9 @@
    Layout da Seção Principal
 ------------------------------ */
 main {
-	margin: 6rem 0 1rem 0;
+	margin: 3rem 0 1rem 0;
 }
-#titulo {
+#titulo-bebidas, #titulo-salgados, #titulo-doces {
   margin-left: 1.5rem;
 	margin-bottom: 1rem;
 }
@@ -30,7 +30,7 @@ main {
 	margin-right: 1rem;
 }
 #bebidas, #salgados, #doces {
-	margin-bottom: 2rem;
+	margin-bottom: 3rem;
 }
 
 /* ---------------------------
@@ -95,4 +95,13 @@ main {
 	font-size: 16px;
 	border: none;
 	cursor: pointer;
+}
+/* Adicionado hover para o botão de adicionar produto */
+.adicionar:hover {
+	background-color: #6f5c3c;
+}
+/* Adicionado animação para evidenciar o clique no botão */
+.adicionar:active {
+	transform: scale(0.95);
+	transition: transform 0.1s ease-in-out;
 }
