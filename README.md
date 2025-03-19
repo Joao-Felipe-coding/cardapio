@@ -6,27 +6,35 @@ Este projeto é um cardápio online para um restaurante, desenvolvido utilizando
 
 O projeto contém os seguintes arquivos e pastas:
 
-- **index.html**: A página principal do cardápio online. Contém a estrutura HTML que organiza as seções do cardápio, incluindo categorias, itens, descrições e preços. O layout é responsivo e inclui links de navegação entre as categorias.
+- **index.html**: A página principal do cardápio online. Contém a estrutura HTML que organiza as seções do cardápio, incluindo categorias, itens, descrições e preços.
+- **assets/css/**: Pasta com os arquivos de estilo, incluindo:
+  - style.css: Define a identidade visual, cores, fontes e layout responsivo.
+  - categorias-produtos.css: Estiliza a exibição dos produtos por categoria.
+  - back-to-top.css: Estiliza o botão de retorno ao topo.
+  - mobile-nav-bar.css: Estiliza a barra de navegação mobile.
+- **assets/js/**: Pasta com os scripts JavaScript:
+  - main.js: Gerencia a interação com os pedidos e atualização do total.
+  - backToTop.js: Implementa o comportamento de rolagem suave para o topo da página.
+  - loadProdutos.js: Carrega dinamicamente os produtos nas categorias.
+  - mobileNavbar.js: Gerencia a navegação mobile, incluindo a animação do menu.
+- **assets/images/**: Pasta com imagens dos pratos e elementos visuais, como o logo do site.
 
-- **assets/css/style.css**: O arquivo de estilo CSS que define a identidade visual do restaurante, incluindo cores, fontes e layout responsivo, garantindo que o cardápio seja visualmente atraente em diferentes dispositivos e que a navegação seja intuitiva.
+## Novos Dados e Funcionalidades
 
-- **assets/images**: Pasta destinada a conter as imagens dos pratos, que são utilizadas para ilustrar os itens do cardápio. As imagens devem ser otimizadas para web e refletir a identidade visual do restaurante.
-
-- **assets/js/main.js**: Este arquivo pode ser utilizado para scripts JavaScript, caso haja necessidade de interatividade no cardápio, como animações ou navegação dinâmica.
+- Os produtos agora são carregados dinamicamente com dados definidos em loadProdutos.js.
+- Foi adicionado um botão "Voltar ao Topo" com comportamento suave, conforme definido no script backToTop.js.
+- A navegação mobile foi aprimorada com animações e interação gerenciada pelo mobileNavbar.js.
 
 ## Instruções para Visualização
 
 1. Clone ou baixe o repositório.
 2. Abra o arquivo `index.html` em um navegador web.
-3. Navegue pelo cardápio e explore as diferentes seções.
+3. Navegue pelo cardápio; os produtos serão carregados automaticamente e a navegação responderá às interações.
+4. Utilize o botão de "Voltar ao Topo" para retornar ao início da página.
 
 ## Escolhas de Design
 
 O design do cardápio foi pensado para ser intuitivo e fácil de navegar, com uma paleta de cores que reflete a identidade do restaurante. As fontes foram escolhidas para garantir legibilidade e um toque de sofisticação.
-
-## Contribuições
-
-Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou pull requests para melhorias ou correções.
 
 ## Hospedagem
 
