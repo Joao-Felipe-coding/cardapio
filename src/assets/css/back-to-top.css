@@ -1,0 +1,69 @@
+.svgIcon {
+	width: 12px;
+	transition-duration: 0.3s;
+}
+.svgIcon path {
+	fill: white;
+}
+.back-to-top {
+	margin: auto;
+	margin-bottom: 1rem;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background-color: rgb(20, 20, 20);
+	border: none;
+	font-weight: 600;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	transition-duration: 0.4s;
+	overflow: hidden;
+	position: relative;
+	z-index: 1;
+}
+.back-to-top:hover {
+	width: 140px;
+	border-radius: 50px;
+	transition-duration: 0.3s;
+	background-color: #85714D;
+	align-items: center;
+}
+.back-to-top:hover .svgIcon {
+	transition-duration: 0.4s;
+	transform: translateY(-200%);
+}
+.back-to-top::before {
+	position: absolute;
+	bottom: -20px;
+	content: "Voltar ao Topo";
+	color: white;
+	font-size: 0px;
+}
+.back-to-top:hover::before {
+	font-size: 13px;
+	opacity: 1;
+	bottom: unset;
+	transition-duration: 0.3s;
+}
+
+@media (max-width: 999px) {
+    .back-to-top:hover,
+    .back-to-top:active {
+        /* Mantém o estado base */
+        width: 50px;
+        border-radius: 50%;
+        background-color: rgb(20, 20, 20);
+        transition: none;
+    }
+    .back-to-top:hover .svgIcon,
+    .back-to-top:active .svgIcon {
+        transform: none;
+    }
+    .back-to-top:hover::before,
+    .back-to-top:active::before {
+        font-size: 0;
+        opacity: 0;
+    }
+}
