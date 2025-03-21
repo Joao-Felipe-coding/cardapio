@@ -9,7 +9,6 @@ import '../src/assets/css/categorias-produtos.css';
 import '../src/assets/css/mobile-nav-bar.css';
 
 // JS
-import '../src/assets/js/loadProdutos';
 import '../src/assets/js/backToTop';
 import '../src/assets/js/mobileNavbar';
 import '../src/assets/js/pedidos';
