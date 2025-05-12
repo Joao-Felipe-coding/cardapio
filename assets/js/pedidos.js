@@ -16,6 +16,8 @@ document.addEventListener('click', (event) => {
     total += preco;
     totalElemento.textContent = `Total: R$ ${total.toFixed(2)}`;
     atualizarVisibilidadeLimpar();
+    // Exibe popup de confirmação
+    mostrarPopupAdicionado(nome);
   }
 });
 
@@ -83,3 +85,21 @@ botaoFinalizarPedido.addEventListener("click", () => {
   document.getElementById('codigo-mesa-3').value = '';
   document.getElementById('codigo-mesa-4').value = '';
 });
+
+// Função para mostrar popup de confirmação
+function mostrarPopupAdicionado(nomeProduto) {
+  const container = document.getElementById('popup-container');
+  if (!container) return;
+  const popup = document.createElement('div');
+  popup.className = 'popup-adicionado';
+  popup.innerHTML = `
+    <svg viewBox="0 0 24 24"><path d="M9.5 17.5l-5-5 1.41-1.41L9.5 14.67l8.59-8.59L19.5 7.5z"/></svg>
+    <span>\"${nomeProduto.replace(/"/g, '&quot;')}\" adicionado aos pedidos!</span>
+  `;
+  container.appendChild(popup);
+  // Remove após 3 segundos com animação
+  setTimeout(() => {
+    popup.classList.add('hide');
+    setTimeout(() => popup.remove(), 350);
+  }, 3000);
+}
