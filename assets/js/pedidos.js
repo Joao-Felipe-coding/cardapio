@@ -70,6 +70,7 @@ botaoFinalizarPedido.addEventListener("click", () => {
   if (!regex.test(codigo) || !codigosValidos.includes(codigo)) {
     erroCodigoMesa.textContent = 'Informe um código de mesa válido.';
     erroCodigoMesa.style.display = 'inline';
+    erroCodigoMesa.style.textAlign = 'center';
     document.getElementById('codigo-mesa-1').focus();
     return;
   }
