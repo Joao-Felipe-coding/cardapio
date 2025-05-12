@@ -29,7 +29,6 @@ nav {
 	padding-right: 2rem;
 	z-index: 1000;
 	box-sizing: border-box;
-	box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.07);
 }
 
 .logo {
@@ -47,6 +46,13 @@ nav {
 	letter-spacing: 2px;
 	margin-left: 32px;
 	transition: opacity 0.3s ease-in-out;
+}
+
+.pedidos-link {
+	background-color: #6d5d3f;
+	color: white;
+	padding: 0.5rem 1rem;
+	border-radius: 5px;
 }
 
 .hamburger {
