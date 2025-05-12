@@ -1,5 +1,5 @@
-a {
-	font-size: large;
+header a {
+	font-weight: 600;
 	color: white;
 	text-decoration: none;
 	transition: 0.3s;
