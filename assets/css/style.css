@@ -35,6 +35,7 @@ body {
 }
 #pedidos h2 {
 	color: #85714d;
+    margin: auto;
 	margin-bottom: 1rem;
 }
 #pedidos ul {
