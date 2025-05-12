@@ -6,6 +6,17 @@
 	padding: 0;
 }
 
+html {
+	scroll-padding-top: 8rem;
+	scroll-behavior: smooth;
+	/* Esconder a barra de rolagem mas permitir scroll */
+	scrollbar-width: none; /* Firefox */
+}
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+	display: none; /* Chrome, Safari, Edge */
+}
+
 body {
 	background-color: #ffffff;
 }
