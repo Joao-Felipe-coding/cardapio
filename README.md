@@ -1,41 +1,75 @@
 # Cardápio Online
 
-Este projeto é um cardápio online para um restaurante, desenvolvido utilizando HTML e CSS. O objetivo é fornecer uma interface visualmente atraente e responsiva que reflita a identidade do restaurante.
+Este projeto é um cardápio online interativo para restaurantes, cafés ou lanchonetes, desenvolvido com HTML, CSS e JavaScript puro. Ele proporciona uma experiência moderna, responsiva e intuitiva para clientes visualizarem produtos, adicionarem itens ao pedido e finalizarem a solicitação diretamente pelo navegador.
+
+## Funcionalidades
+
+- **Visualização de Produtos por Categoria:** Produtos organizados em Bebidas, Salgados e Doces, exibidos com imagem, nome, descrição e preço.
+- **Carregamento Dinâmico dos Produtos:** Os produtos são carregados automaticamente via JavaScript, facilitando a manutenção e atualização do cardápio.
+- **Navegação Responsiva:** Navbar fixa no topo, com menu hambúrguer para dispositivos móveis e navegação suave entre seções.
+- **Adição de Produtos ao Pedido:** Botão "Adicionar" em cada produto, com popup de confirmação animado.
+- **Modal de Pedidos:** Visualização dos itens adicionados, cálculo automático do total, opção para limpar a lista e finalizar o pedido.
+- **Código da Mesa:** Campo para digitar o código da mesa, com validação automática.
+- **Botão "Voltar ao Topo":** Acesso rápido ao topo da página, com animação.
+- **Tela de Carregamento Inicial:** Exibe o logo do restaurante enquanto a página carrega.
+- **Design Moderno e Responsivo:** Layout adaptável para desktop, tablet e mobile.
+- **Acessibilidade:** Uso de fontes legíveis, contraste adequado e navegação por teclado.
+
+## Tecnologias Utilizadas
+
+- **HTML5**: Estrutura da página.
+- **CSS3**: Estilização, responsividade e animações.
+- **JavaScript Vanilla**: Manipulação do DOM, carregamento dinâmico, interações e validações.
 
 ## Estrutura do Projeto
 
-O projeto contém os seguintes arquivos e pastas:
+```
+cardapio/
+├── index.html
+├── README.md
+├── assets/
+│   ├── css/
+│   │   ├── style.css
+│   │   ├── categorias-produtos.css
+│   │   ├── mobile-nav-bar.css
+│   │   ├── back-to-top.css
+│   │   └── popup-adicionado.css
+│   ├── js/
+│   │   ├── main.js
+│   │   ├── loadProdutos.js
+│   │   ├── pedidos.js
+│   │   ├── mobileNavbar.js
+│   │   └── backToTop.js
+│   └── images/
+│       ├── site-logo/
+│       │   └── logo.svg
+│       ├── bebidas/
+│       ├── salgados/
+│       └── doces/
+└── LICENSE
+```
 
-- **index.html**: A página principal do cardápio online. Contém a estrutura HTML que organiza as seções do cardápio, incluindo categorias, itens, descrições e preços.
-- **assets/css/**: Pasta com os arquivos de estilo, incluindo:
-  - style.css: Define a identidade visual, cores, fontes e layout responsivo.
-  - categorias-produtos.css: Estiliza a exibição dos produtos por categoria.
-  - back-to-top.css: Estiliza o botão de retorno ao topo.
-  - mobile-nav-bar.css: Estiliza a barra de navegação mobile.
-- **assets/js/**: Pasta com os scripts JavaScript:
-  - main.js: Gerencia a interação com os pedidos e atualização do total.
-  - backToTop.js: Implementa o comportamento de rolagem suave para o topo da página.
-  - loadProdutos.js: Carrega dinamicamente os produtos nas categorias.
-  - mobileNavbar.js: Gerencia a navegação mobile, incluindo a animação do menu.
-- **assets/images/**: Pasta com imagens dos pratos e elementos visuais, como o logo do site.
+## Como Usar
 
-## Novos Dados e Funcionalidades
+1. **Clone ou baixe o repositório:**
+   ```bash
+   git clone https://github.com/Unicesumar/front-end.git
+   ```
+2. **Abra o arquivo `index.html` em seu navegador.**
+3. **Navegue pelas categorias, adicione produtos ao pedido e finalize normalmente.**
 
-- Os produtos agora são carregados dinamicamente com dados definidos em loadProdutos.js.
-- Foi adicionado um botão "Voltar ao Topo" com comportamento suave, conforme definido no script backToTop.js.
-- A navegação mobile foi aprimorada com animações e interação gerenciada pelo mobileNavbar.js.
+## Detalhes das Funcionalidades
 
-## Instruções para Visualização
+- **Navegação Mobile:** Menu hambúrguer com animação, fecha automaticamente ao selecionar uma seção.
+- **Pedidos:** Modal centralizado, bloqueia o fundo ao abrir, permite visualizar, limpar e finalizar pedidos.
+- **Código da Mesa:** Inputs automáticos, validação de formato e feedback visual de erro.
+- **Popups:** Confirmação animada ao adicionar produtos.
+- **Botão Voltar ao Topo:** Sempre visível, com animação ao passar o mouse (desktop).
 
-1. Clone ou baixe o repositório.
-2. Abra o arquivo `index.html` em um navegador web.
-3. Navegue pelo cardápio; os produtos serão carregados automaticamente e a navegação responderá às interações.
-4. Utilize o botão de "Voltar ao Topo" para retornar ao início da página.
+## Licença
 
-## Escolhas de Design
+MIT License © 2025 João Felipe
 
-O design do cardápio foi pensado para ser intuitivo e fácil de navegar, com uma paleta de cores que reflete a identidade do restaurante. As fontes foram escolhidas para garantir legibilidade e um toque de sofisticação.
+---
 
-## Hospedagem
-
-O projeto foi hospedado no GitHub Pages, permitindo que o cardápio online seja acessado facilmente através de um link. Para visualizar, basta acessar a URL fornecida após a publicação do repositório.
+Projeto desenvolvido para fins educacionais e demonstração de boas práticas em front-end.
