@@ -1,6 +1,7 @@
 header a {
+	font-family: "Montserrat", sans-serif;
 	font-weight: 600;
-	color: white;
+	color: #fff;
 	text-decoration: none;
 	transition: 0.3s;
 }
@@ -12,7 +13,6 @@ a:hover {
 	width: 100%;
 	top: 0;
 	z-index: 1000;
-	position: relative;
 }
 
 nav {
@@ -24,7 +24,8 @@ nav {
 	justify-content: space-between;
 	align-items: center;
 	padding: 0.5rem;
-	background-color: #85714d;
+	background-color: #6d5c3c;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 	padding-left: 2rem;
 	padding-right: 2rem;
 	z-index: 1000;
@@ -49,8 +50,8 @@ nav {
 }
 
 .pedidos-link {
-	background-color: #6d5d3f;
-	color: white;
+	background-color: #85714d;
+	color: #fff;
 	padding: 0.5rem 1rem;
 	border-radius: 5px;
 }
@@ -109,6 +110,7 @@ nav {
 		padding-left: 1rem;
 		padding-right: 1rem;
 		box-sizing: border-box;
+		background: #6d5c3c;
 	}
 	.nav-list {
 		position: fixed;
@@ -116,7 +118,7 @@ nav {
 		right: -1px;
 		width: 50%;
 		min-height: 250px;
-		background: #85714d;
+		background: #6d5c3c;
 		flex-direction: column;
 		align-items: center;
 		justify-content: space-around;

@@ -2,15 +2,20 @@
    Layout da Seção Principal
 ------------------------------ */
 main {
-	margin: 3rem 0 1rem 0;
+	margin: 7rem 0 1rem 0;
 }
 #titulo-bebidas,
 #titulo-salgados,
 #titulo-doces {
-	font-weight: bold;
-	color: #85714d;
-	margin-left: 1.5rem;
-	margin-bottom: 1rem;
+	font-family: 'Playfair Display', serif;
+	display: flex;
+	font-size: 5rem;
+	font-weight: 500;
+	letter-spacing: 5px;
+	color: #6d5c3c;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 3rem;
 }
 
 /* ---------------------------
@@ -18,100 +23,219 @@ main {
 ---------------------------- */
 .categoria {
 	display: flex;
-	flex-wrap: nowrap;
-	overflow-x: scroll;
-	gap: 1rem;
-	-ms-overflow-style: none;
-	scrollbar-width: none;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 3rem;
 }
-.categoria::-webkit-scrollbar {
-	display: none;
-}
-.categoria > .produto:first-child {
-	margin-left: 1rem;
-}
-.categoria > .produto:last-child {
-	margin-right: 1rem;
-}
+
 #bebidas,
 #salgados,
 #doces {
-	margin-bottom: 3rem;
+	margin-bottom: 5rem;
 }
 
 /* ---------------------------
-   Estilização de Produtos
+   Estilização de Produtos (NOVO DESIGN)
 ---------------------------- */
 .produto {
+	background: #fdfcf9;
+	border-radius: 18px;
+	box-shadow: 0 6px 24px rgba(133, 113, 77, 0.08), 0 1.5px 4px rgba(133, 113, 77, 0.05);
+	padding: 0;
+	max-width: 320px;
+	width: 100%;
+	min-height: 420px;
 	display: flex;
 	flex-direction: column;
-	gap: 2rem;
-	background-color: rgb(255, 255, 255);
-	border: solid 1px rgb(218, 216, 216);
-	border-radius: 8px;
-	padding: 1rem;
-	flex-shrink: 0;
-	width: 100%;
-	max-width: 250px;
+	align-items: center;
+	transition: box-shadow 0.2s, transform 0.2s;
 	position: relative;
+	margin: 0.5rem 0.5rem 2rem 0.5rem;
+	overflow: hidden;
 }
-.produto::after {
-	/* Linha separadora */
-	content: "";
-	position: absolute;
-	top: calc(100% - 4rem);
-	left: 1rem;
-	right: 1rem;
-	height: 1px;
-	background-color: rgb(218, 216, 216);
+.produto:hover {
+	box-shadow: 0 12px 32px rgba(133, 113, 77, 0.18), 0 2px 8px rgba(133, 113, 77, 0.12);
+	transform: translateY(-4px) scale(1.03);
 }
 .produto-superior {
 	display: flex;
-	align-items: calc(50%);
-	justify-content: space-between;
-	gap: 1rem;
+	flex-direction: column;
+	align-items: center;
+	gap: 0;
+	width: 100%;
+	margin-bottom: 0;
+	padding: 0;
 }
 .produto-superior img {
 	width: 100%;
-	height: 6rem;
-	max-width: 120px;
+	height: 260px;
+	max-width: 100%;
 	object-fit: cover;
-	border-radius: 8px;
+	border-radius: 0;
+	box-shadow: none;
+	margin-bottom: 0;
+	display: block;
 }
 .produto-dados {
 	display: flex;
 	flex-direction: column;
-	justify-content: space-around;
+	justify-content: flex-start;
+	align-items: flex-start;
 	text-align: left;
+	gap: 0.3rem;
+	width: 100%;
+	padding: 1.2rem 1.2rem 0 1.2rem;
+	box-sizing: border-box;
 }
 .produto-dados h3 {
-	font-weight: 600;
-	font-size: 1.2rem;
+	font-family: "Montserrat", sans-serif;
+	font-size: 1.25rem;
+	font-weight: 700;
+	color: #6d5c3c;
+	margin-bottom: 0;
+	letter-spacing: 0.01em;
+}
+.produto-dados p {
+	font-family: "Montserrat", sans-serif;
+	font-size: 1.05rem;
+	color: #85714d;
+	font-weight: 400;
+	margin-bottom: 0;
+	opacity: 0.85;
 }
 .produto-inferior {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	width: 100%;
+	margin-top: 1rem;
+	gap: 1rem;
+	padding: 0 1.2rem 1.2rem 1.2rem;
+	box-sizing: border-box;
 }
 .preco {
-	color: rgba(0, 0, 0, 0.63);
-	font-size: 16px;
+	color: #6d5c3c;
+	font-size: 1.15rem;
+	font-weight: 600;
+	background: #f3ede4;
+	padding: 0.4rem 1.1rem;
+	border-radius: 8px;
+	box-shadow: 0 1px 3px rgba(133, 113, 77, 0.07);
 }
 .adicionar {
-	background-color: #85714d;
-	color: white;
-	padding: 0.5rem 30px;
-	border-radius: 4px;
-	font-size: 16px;
+	background: #85714d;
+	color: #fff;
+	padding: 0.55rem 1.7rem;
+	border-radius: 22px;
+	font-size: 1.08rem;
+	font-weight: 600;
 	border: none;
 	cursor: pointer;
+	box-shadow: 0 2px 8px rgba(133, 113, 77, 0.10);
+	transition: background 0.2s, transform 0.1s;
 }
-/* Adicionado hover para o botão de adicionar produto */
 .adicionar:hover {
-	background-color: #6f5c3c;
+	background: #6d5c3c;
+	transform: scale(1.04);
 }
-/* Adicionado animação para evidenciar o clique no botão */
 .adicionar:active {
-	transform: scale(0.95);
-	transition: transform 0.1s ease-in-out;
+	transform: scale(0.97);
+}
+
+/* NOVA RESPONSIVIDADE */
+@media (max-width: 1200px) {
+	#titulo-bebidas,
+	#titulo-salgados,
+	#titulo-doces {
+		font-size: 3.5rem;
+	}
+	.categoria {
+		gap: 2rem;
+	}
+	.produto {
+		max-width: 270px;
+		min-height: 350px;
+	}
+	.produto-superior img {
+		height: 200px;
+	}
+}
+@media (max-width: 900px) {
+	main {
+		margin: 7rem 0 1rem 0;
+	}
+	#titulo-bebidas,
+	#titulo-salgados,
+	#titulo-doces {
+		font-size: 2.3rem;
+		margin-bottom: 2rem;
+	}
+	.categoria {
+		gap: 1.2rem;
+	}
+	.produto {
+		max-width: 95vw;
+		min-width: 80vw;
+		margin: 0 0 2rem 0;
+	}
+	.produto-superior img {
+		height: 160px;
+	}
+	.produto-dados {
+		padding: 1rem 1rem 0 1rem;
+	}
+	.produto-inferior {
+		padding: 0 1rem 1rem 1rem;
+	}
+	.produto:hover {
+		/* Desabilita hover em telas pequenas */
+		box-shadow: none;
+		transform: none;
+	}
+}
+@media (max-width: 600px) {
+	main {
+		margin: 6rem 0 1rem 0;
+	}
+	#titulo-bebidas,
+	#titulo-salgados,
+	#titulo-doces {
+		font-size: 3rem;
+		margin-bottom: 3rem;
+		letter-spacing: 1px;
+	}
+	.categoria {
+		gap: 1rem;
+		flex-direction: column;
+		align-items: stretch;
+	}
+	.produto {
+		max-width: 90vw;
+		min-width: 90vw;
+		min-height: 250px;
+		margin: auto;
+	}
+	.produto-superior img {
+		height: 310px;
+	}
+	.produto-dados h3 {
+		font-size: 1rem;
+	}
+	.produto-dados p {
+		font-size: 0.92rem;
+	}
+	.preco {
+		font-size: 0.95rem;
+		padding: 0.25rem 0.7rem;
+	}
+	.adicionar {
+		font-size: 0.95rem;
+		padding: 0.4rem 1rem;
+	}
+	.produto:hover {
+		/* Desabilita hover em telas muito pequenas */
+		box-shadow: none;
+		transform: none;
+	}
 }

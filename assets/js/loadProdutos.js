@@ -38,11 +38,11 @@ function initLoadProdutos() {
         divProduto.className = 'produto';
         divProduto.innerHTML = `
           <div class="produto-superior">
-            <div class="produto-dados">
+            <img src="${produto.image}" alt="${produto.name}">
+            <div class="produto-dados" style="display: flex; flex-direction: column;">
               <h3>${produto.name}</h3>
               <p>${produto.description}</p>
             </div>
-            <img src="${produto.image}" alt="${produto.name}">
           </div>
           <div class="produto-inferior">
             <span class="preco">${produto.price}</span>

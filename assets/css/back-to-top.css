@@ -11,7 +11,7 @@
 	width: 50px;
 	height: 50px;
 	border-radius: 50%;
-	background-color: rgb(20, 20, 20);
+	background-color: #6d5c3c;
 	border: none;
 	font-weight: 600;
 	display: flex;
@@ -27,7 +27,7 @@
 	width: 140px;
 	border-radius: 50px;
 	transition-duration: 0.3s;
-	background-color: #85714D;
+	background-color: #85714d;
 	align-items: center;
 }
 .back-to-top:hover .svgIcon {
@@ -54,7 +54,7 @@
         /* Mantém o estado base */
         width: 50px;
         border-radius: 50%;
-        background-color: rgb(20, 20, 20);
+        background-color: #6d5c3c;
         transition: none;
     }
     .back-to-top:hover .svgIcon,
@@ -65,5 +65,23 @@
     .back-to-top:active::before {
         font-size: 0;
         opacity: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .back-to-top {
+        width: 40px;
+        height: 40px;
+        font-size: 0.9rem;
+    }
+    .back-to-top:hover,
+    .back-to-top:active {
+        width: 40px;
+        border-radius: 50%;
+        background-color: #6d5c3c;
+        transition: none;
+    }
+    .back-to-top .svgIcon {
+        width: 10px;
     }
 }

@@ -104,3 +104,32 @@ function mostrarPopupAdicionado(nomeProduto) {
     setTimeout(() => popup.remove(), 350);
   }, 3000);
 }
+
+// Modal de pedidos
+const pedidosOverlay = document.getElementById('pedidos-overlay');
+const pedidosModal = document.getElementById('pedidos');
+const fecharPedidosBtn = document.getElementById('fechar-pedidos');
+const pedidosLink = document.querySelector('.pedidos-link');
+
+function abrirPedidos() {
+  pedidosOverlay.style.display = 'flex'; // Garante que o modal aparece centralizado
+  document.body.style.overflow = 'hidden';
+}
+function fecharPedidos() {
+  pedidosOverlay.style.display = 'none';
+  document.body.style.overflow = '';
+}
+if (pedidosLink) {
+  pedidosLink.addEventListener('click', (e) => {
+    e.preventDefault();
+    abrirPedidos();
+  });
+}
+if (fecharPedidosBtn) {
+  fecharPedidosBtn.addEventListener('click', fecharPedidos);
+}
+if (pedidosOverlay) {
+  pedidosOverlay.addEventListener('click', (e) => {
+    if (e.target === pedidosOverlay) fecharPedidos();
+  });
+}
